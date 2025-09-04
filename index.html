@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kavin – Gaming Video Editor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow z-50">
+    <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <!-- Logo -->
+      <a href="#home">
+        <h1 style="color: blue">Home:</h1>
+      </a>
+      <!-- Nav Links -->
+      <ul class="hidden sm:flex gap-6 font-medium">
+        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-500">About</a></li>
+        <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+        <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-4">
+    <img src="https://via.placeholder.com/150" alt="Kavin" class="rounded-full shadow-lg w-40 mb-6">
+    <h2 class="text-4xl font-bold mb-2">Hi, I’m Kavin</h2>
+    <p class="text-lg mb-6">Gaming Video Editor</p>
+    <div class="flex gap-4 flex-wrap justify-center">
+      <a href="#projects" class="px-6 py-3 bg-blue-500 text-white rounded-xl hover:bg-blue-600">See My Work</a>
+      <a href="#contact" class="px-6 py-3 bg-gray-800 text-white rounded-xl hover:bg-gray-900">Hire Me</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-5xl mx-auto py-20 px-4">
+    <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+    <p class="text-center text-lg leading-relaxed">
+      I am a passionate <span class="font-semibold">Gaming Video Editor and Photo Editor</span>.  
+      I enjoy transforming raw gameplay and photos into creative, polished, and visually stunning stories.  
+      My goal is to bring excitement and life to every frame through creativity and precision.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="max-w-5xl mx-auto py-20 px-4">
+    <h2 class="text-3xl font-bold mb-10 text-center">Skills</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="p-6 bg-white shadow rounded-xl text-center">
+        <h3 class="font-semibold mb-2">Video Editing</h3>
+        <p>DaVinci Resolve, VN</p>
+      </div>
+      <div class="p-6 bg-white shadow rounded-xl text-center">
+        <h3 class="font-semibold mb-2">Photo Editing</h3>
+        <p>Photoshop, Picsart</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto py-20 px-4">
+    <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="bg-white shadow rounded-xl overflow-hidden">
+        <img src="https://via.placeholder.com/400x250" class="w-full" alt="">
+        <div class="p-4">
+          <h3 class="font-semibold">Gaming Montage</h3>
+          <p class="text-sm mb-2">Edited gameplay highlights.</p>
+          <a href="https://www.youtube.com/@Kavin-u4p" target="_blank" class="text-blue-500 hover:underline">View Project</a>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-xl overflow-hidden">
+        <img src="https://via.placeholder.com/400x250" class="w-full" alt="">
+        <div class="p-4">
+          <h3 class="font-semibold">Photo Editing Showcase</h3>
+          <p class="text-sm mb-2">Before & after transformations.</p>
+          <a href="https://www.instagram.com/kavin_raja_352/" target="_blank" class="text-blue-500 hover:underline">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media Tab -->
+  <section id="social" class="max-w-3xl mx-auto py-16 px-4 text-center">
+    <h2 class="text-2xl font-bold mb-8">Find Me Online</h2>
+    <div class="flex justify-center gap-6 flex-wrap">
+      <a href="https://www.instagram.com/kavin_raja_352/" target="_blank" class="hover:text-pink-500" data-lucide="instagram"></a>
+      <a href="https://github.com/kavin407" target="_blank" class="hover:text-gray-800" data-lucide="github"></a>
+      <a href="https://www.youtube.com/@Kavin-u4p" target="_blank" class="hover:text-red-500" data-lucide="youtube"></a>
+      <a href="mailto:kavinraja6413@gmail.com" class="hover:text-blue-500" data-lucide="mail"></a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-3xl mx-auto py-20 px-4 text-center">
+    <h2 class="text-3xl font-bold mb-10">Contact Me</h2>
+    <p class="text-lg">Email: <a href="mailto:kavinraja6413@gmail.com" class="text-blue-500 hover:underline">kavinraja6413@gmail.com</a></p>
+    <p class="text-lg">Youtube: <a href="https://www.youtube.com/@Kavin-u4p" class="text-blue-500 hover:underline">Youtube Chanel   </a></p>
+  
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-200 py-6 text-center">
+    <p>© 2025 Kavin – Gaming Video Editor</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
