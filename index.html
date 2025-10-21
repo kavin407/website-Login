@@ -1,312 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kavin – Gaming Video Editor</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <style>/* General */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", Arial, sans-serif;
-}
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-html {
-  scroll-behavior: smooth;
-}
+        .login-page {
+            width: 360px;
+            padding: 8% 0 0;
+            margin: auto;
+        }
 
-body {
-  background: #f9fafb;
-  color: #111827;
-  line-height: 1.6;
-}
+        .form {
+            position: relative;
+            z-index: 1;
+            background: #FFFFFF;
+            max-width: 360px;
+            margin: 0 auto 100px;
+            padding: 45px;
+            text-align: center;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
 
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  z-index: 50;
-}
+        .form input {
+            font-family: "Roboto", sans-serif;
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
 
-.nav-container {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
+        .form button {
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #4CAF50;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+        }
 
-.logo img {
-  height: 40px;
-}
+        .form button:hover,
+        .form button:active,
+        .form button:focus {
+            background: #43A047;
+        }
 
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
+        .result-container {
+            margin-top: 20px;
+            font-family: "Roboto", sans-serif;
+        }
 
-.nav-links a {
-  text-decoration: none;
-  color: #111827;
-  font-weight: 500;
-  transition: color 0.3s;
-}
+        .result-container a {
+            text-decoration: none;
+            color: white;
+        }
 
-.nav-links a:hover {
-  color: #2563eb; /* blue */
-}
-
-/* Hero */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-.hero-img {
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5rem;
-  width: 150px;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Buttons */
-.btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s, color 0.3s;
-}
-
-.btn.primary {
-  background: #2563eb;
-  color: white;
-}
-
-.btn.primary:hover {
-  background: #1e40af;
-}
-
-.btn.dark {
-  background: #111827;
-  color: white;
-}
-
-.btn.dark:hover {
-  background: #000;
-}
-
-.btn.link {
-  color: #2563eb;
-  font-weight: 500;
-}
-
-.btn.link:hover {
-  text-decoration: underline;
-}
-
-/* Section */
-.section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 4rem 1rem;
-  text-align: center;
-}
-
-.section h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-}
-
-/* Cards */
-.skills,
-.projects {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-.card {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-/* Social Media */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.social-icons a {
-  font-size: 24px;
-  color: #111827;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #2563eb;
-}
-
-/* Footer */
-.footer {
-  background: #e5e7eb;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (min-width: 640px) {
-  .skills,
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-</style>
+        .result-container button {
+            background: #1a73e8;
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <header class="navbar">
-      <!-- Nav Links -->
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <img src="https://via.placeholder.com/150" alt="Kavin" class="hero-img">
-    <h2>Hi, I’m Kavin</h2>
-    <p>Gaming Video Editor</p>
-    <div class="hero-buttons">
-      <a href="#projects" class="btn primary">See My Work</a>
-      <a href="#contact" class="btn dark">Hire Me</a>
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form" onsubmit="return validateLogin()">
+                <input type="text" id="username" placeholder="username" />
+                <input type="password" id="password" placeholder="password" />
+                <button type="submit">login</button>
+            </form>
+            <!-- This is where the result will be displayed -->
+            <div id="result-container"></div>
+        </div>
     </div>
-  </section>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I am a passionate <strong>Gaming Video Editor and Photo Editor</strong>.  
-      I enjoy transforming raw gameplay and photos into creative, polished, and visually stunning stories.  
-      My goal is to bring excitement and life to every frame through creativity and precision.
-    </p>
-  </section>
+    <script>
+        function validateLogin() {
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+            const resultContainer = document.getElementById('result-container');
 
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="card">
-        <h3>Video Editing</h3>
-        <p>DaVinci Resolve, VN</p>
-      </div>
-      <div class="card">
-        <h3>Photo Editing</h3>
-        <p>Photoshop, Picsart</p>
-      </div>
-    </div>
-  </section>
+            const correctUsername = "Admin";
+            const correctPassword = "web@123";
 
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <img src="https://via.placeholder.com/400x250" alt="">
-        <h3>Gaming Montage</h3>
-        <p>Edited gameplay highlights.</p>
-        <a href="https://www.youtube.com/@Kavin-u4p" target="_blank" class="btn link">View Project</a>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/400x250" alt="">
-        <h3>Photo Editing Showcase</h3>
-        <p>Before & after transformations.</p>
-        <a href="https://www.instagram.com/kavin_raja_352/" target="_blank" class="btn link">View Project</a>
-      </div>
-    </div>
-  </section>
+            if (usernameInput.value === correctUsername && passwordInput.value === correctPassword) {
+                // If credentials are correct, show the website button
+                resultContainer.innerHTML = '<button onclick="window.location.href=\'http://netmirror.app/\'">Go to Example</button>';
+            } else {
+                // If incorrect, show an error message
+                resultContainer.innerHTML = 'Incorrect password or Username';
+            }
 
-  <!-- Social Media Tab -->
-  <section id="social" class="section center">
-    <h2>Find Me Online</h2>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/kavin_raja_352/" target="_blank" data-lucide="instagram"></a>
-      <a href="https://github.com/kavin407" target="_blank" data-lucide="github"></a>
-      <a href="https://www.youtube.com/@Kavin-u4p" target="_blank" data-lucide="youtube"></a>
-      <a href="mailto:kavinraja6413@gmail.com" data-lucide="mail"></a>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section center">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:kavinraja6413@gmail.com">kavinraja6413@gmail.com</a></p>
-    <p>YouTube: <a href="https://www.youtube.com/@Kavin-u4p" target="_blank">YouTube Channel</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 Kavin – Gaming Video Editor</p>
-  </footer>
-
-  <script>
-    lucide.createIcons();
-  </script>
+            // Prevent the form from actually submitting and reloading the page
+            return false;
+        }
+    </script>
 </body>
 </html>
